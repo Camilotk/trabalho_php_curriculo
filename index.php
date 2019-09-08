@@ -149,10 +149,62 @@
                 bem importantes para a busca de vagas!
             </p>
             <div class="row">
-                
+                <?php for ($i=0; $i < 3; $i++): ?>
+
+                <div class="form-group col-sm-12">
+                    <label class="form-label">
+                        Nome da Empresa
+                    </label>
+                    <input class="form-control" type="text" minlength="2" maxlenght="250" placeholder="Nome da Empresa">
+                </div>
+
+                <div class="form-group col-sm-12">
+                    <label class="form-label">
+                        Cargo
+                    </label>
+                    <input class="form-control" type="text" minlength="2" maxlength="250" placeholder="Cargo">
+                </div>
+
+                <div class="form-group col-sm-12">
+                    <label class="form-label">
+                        Atividades desempenhadas (opcional)
+                    </label>
+                    <textarea class="form-control"></textarea>
+                </div>
+
+                <div class="form-group col-sm-6">
+                    <label class="form-label">
+                        Data de Inicio
+                    </label>
+                    <div class="input-date">
+                        <input class="form-control" type="date" min="1950-01-01" max="<?=date('Y-m-d');?>">
+                    </div>
+                </div>
+
+                <div class="form-group col-sm-6">
+                    <label class="form-label">
+                        Data de Término
+                    </label>
+                    <div class="input-date">
+                        <input class="form-control" type="date" min="1950-01-01" max="<?=date('Y-m-d');?>">
+                    </div>
+                </div>
+
+                <?php if($i < 2 ): ?>
+                <div class="separador"></div>
+                <?php endif; ?>
+
+                <?php endfor; ?>
+            </div>
+            <div class="container-botoes">
+
+                <a href="#" class="link-cancelar">Voltar</a>
+                <input class="btn btn-primary botao-proximo" type="submit" value="Próximo">
+
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <?php include_once("template/footer.php"); ?>
