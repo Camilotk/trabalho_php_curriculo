@@ -148,6 +148,9 @@
                 Nos conte sobre suas experiências profissionais. Descreva suas atividades e conquistas. Estes itens são
                 bem importantes para a busca de vagas!
             </p>
+            <div class="row">
+                
+            </div>
         </div>
     </div>
 </div>
