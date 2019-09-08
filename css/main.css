@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+/* PROPRIEDADES DA PÁGINA */
+body{
+    background-color: #F3F6F9;
+}
+
+.form-group .form-control {
+    padding: 15px 18px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.form-group .form-label {
+    text-align: left;
+    color: #626262;
+    font-weight: 650;
+    font-size: 15px;
+    font-family: Montserrat,Arial,Tahoma,sans-serif;
+    margin-bottom: 0;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 0.5;
+    display: block;
+    background: url(https://image.flaticon.com/icons/svg/14/14405.svg) no-repeat;
+    width: 20px;
+    height: 20px;
+    border-width: thin;
+}
+
+input[type="file"] {
+    line-height: 10px;
+  }
+
+/* PROPRIEDADES DO BOOTSTRAP */
+.container {
+    margin-top: -255px;
+}
+
+/* PROPRIEDADES ESPECÍFICAS */
+.titulo-aplicacao {
+    color: #FFF;
+}
+
+.quadro-informacoes {
+    border-radius: 10px;
+    padding: 60px;
+    background-color: white;
+    position: relative;
+    margin-bottom: 15px;
+    z-index: 1;
+}
+
+.quadro-informacoes-titulo {
+    text-align: left;
+    font-weight: 400;
+    color: #838383;
+    font-family: Montserrat,Arial,Tahoma,sans-serif;
+}
+
+.quadro-informacoes-subtitulo {
+    color: #757575;
+    font-family: Montserrat,Arial,Tahoma,sans-serif;
+    font-size: 14px;
+    font-weight: bolder;
+    margin-left: 15px;
+    text-align: left;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.wrapper {
+    display: relative;
+}
+
+.cor-fundo {
+    background-color: #6A467D;
+    width: auto;
+    height: 300px;
+    position: relative;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.container-botoes {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.botao-proximo {
+    background-color: #468C46;
+    border-color: #468C46;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: 15px;
+}
+
+.botao-proximo:hover {
+    background-color: rgb(50, 116, 50);
+    border-color:  rgb(50, 116, 50);
+    border-radius: 25px;
+}
+
+.link-cancelar {
+    align-self: flex-start;
+    padding-left: 15px;
+}
+
+.foto-perfil {
+    padding: 5px;
+}
+
+/*
+REFERÊNCIAS:
+ - https://stackoverflow.com/questions/29436074/change-date-input-triangle-to-a-calendar-icon
+ - https://stackoverflow.com/questions/13632171/how-to-vertically-align-filename-on-file-input-in-chrome
+*/
