@@ -1,0 +1,16 @@
+.page {
+    width: 21cm;
+    height: 29.7cm;
+    background-color: #FFF;
+    margin-top: 50px;
+    margin-left:auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    box-shadow: 4px 3px 5px 0px gray;
+}
+
+.sidebar {
+    background-color: #6A467D;
+    width: 8cm;
+    height: inherit;
+}
