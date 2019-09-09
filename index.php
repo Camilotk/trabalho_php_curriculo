@@ -5,7 +5,7 @@
     <div class="container">
         <h2 class="titulo-aplicacao">Gerador de Currículo</h2>
 
-        <div class="quadro-informacoes informacoes-pesssoais">
+        <div id="basic-form" class="quadro-informacoes informacoes-pesssoais">
 
             <h3 class="quadro-informacoes-titulo">Informações Pessoais</h3>
             <p class="quadro-informacoes-descricao">
@@ -160,13 +160,13 @@
             </div>
             <div class="container-botoes">
 
-                <a href="#" class="link-cancelar">Voltar</a>
-                <input class="btn btn-primary botao-proximo" type="button" value="Próximo">
+                <a id="information-to-basic-button" href="#" class="link-cancelar">Voltar</a>
+                <input id="information-to-experience" class="btn btn-primary botao-proximo" type="button" value="Próximo">
 
             </div>
         </div>
 
-        <div id="contact-form" class="quadro-informacoes informacoes-experiencias escondido">
+        <div id="experience-form" class="quadro-informacoes informacoes-experiencias escondido">
             <h3 class="quadro-informacoes-titulo">Experiências Profissionais</h3>
             <p class="quadro-informacoes-descricao">
                 Nos conte sobre suas experiências profissionais. Descreva suas atividades e conquistas. Estes itens são
@@ -225,8 +225,8 @@
             </div>
             <div class="container-botoes">
 
-                <a href="#" class="link-cancelar">Voltar</a>
-                <input class="btn btn-primary botao-proximo" type="button" value="Próximo">
+                <a id="experience-to-information" href="#" class="link-cancelar">Voltar</a>
+                <input id="experience-to-formation" class="btn btn-primary botao-proximo" type="button" value="Próximo">
 
             </div>
         </div>
@@ -296,8 +296,8 @@
             </div>
             <div class="container-botoes">
 
-                <a href="#" class="link-cancelar">Voltar</a>
-                <input class="btn btn-primary botao-proximo" type="button" value="Próximo">
+                <a id="formation-to-experience" href="#" class="link-cancelar">Voltar</a>
+                <input id="formation-to-extra" class="btn btn-primary botao-proximo" type="button" value="Próximo">
 
             </div>
         </div>
@@ -374,8 +374,8 @@
             </div>
             <div class="container-botoes">
 
-                <a href="#" class="link-cancelar">Voltar</a>
-                <input class="btn btn-primary botao-proximo" type="button" value="Próximo">
+                <a id="extra-to-formation" href="#" class="link-cancelar">Voltar</a>
+                <input id="extras-to-habilities" class="btn btn-primary botao-proximo" type="button" value="Próximo">
 
             </div>
         </div>
@@ -397,8 +397,8 @@
             </div>
             <div class="container-botoes">
 
-                <a href="#" class="link-cancelar">Voltar</a>
-                <input class="btn btn-primary botao-proximo" type="button" value="Próximo">
+                <a id="habilities-to-extras" href="#" class="link-cancelar">Voltar</a>
+                <input id="habilities-to-resume" class="btn btn-primary botao-proximo" type="button" value="Próximo">
 
             </div>
         </div>
@@ -419,7 +419,7 @@
             </script>
             <div class="container-botoes">
 
-                <a href="#" class="link-cancelar">Voltar</a>
+                <a id="resume-to-habilities" href="#" class="link-cancelar">Voltar</a>
                 <input class="btn btn-primary botao-enviar" type="submit" value="Enviar">
 
             </div>
