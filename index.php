@@ -62,13 +62,14 @@
                 </div>
                 <div class="container-botoes">
 
-                    <input class="btn btn-primary botao-proximo" type="button" value="Próximo">
+                    <input id="basic-to-information-button" class="btn btn-primary botao-proximo" type="button"
+                        value="Próximo">
 
                 </div>
             </div>
         </div>
 
-        <div class="quadro-informacoes informacoes-contato">
+        <div id="information-form" class="quadro-informacoes informacoes-contato escondido">
             <h3 class="quadro-informacoes-titulo">Informações de Contato</h3>
             <p class="quadro-informacoes-descricao">
                 Para continuar o cadastro, insira sua foto e informações de contato. Antes de avançar, confira se os
@@ -165,7 +166,7 @@
             </div>
         </div>
 
-        <div class="quadro-informacoes informacoes-experiencias">
+        <div id="contact-form" class="quadro-informacoes informacoes-experiencias escondido">
             <h3 class="quadro-informacoes-titulo">Experiências Profissionais</h3>
             <p class="quadro-informacoes-descricao">
                 Nos conte sobre suas experiências profissionais. Descreva suas atividades e conquistas. Estes itens são
@@ -195,7 +196,7 @@
                     <textarea id="descricao-experiencia-<?=$i;?>" class="form-control"></textarea>
                     <script>
                         CKEDITOR.replace('descricao-experiencia-<?=$i;?>');
-                        </script>
+                    </script>
                 </div>
 
                 <div class="form-group col-sm-6">
@@ -230,7 +231,7 @@
             </div>
         </div>
 
-        <div class="quadro-informacoes informacoes-formacao">
+        <div id="formation-form" class="quadro-informacoes informacoes-formacao escondido">
             <h3 class="quadro-informacoes-titulo">Escolaridade</h3>
             <p class="quadro-informacoes-descricao">
                 Informe seu nível de formação, nome do curso, instituição, ano de início e ano de conclusão.
@@ -301,7 +302,7 @@
             </div>
         </div>
 
-        <div class="quadro-informacoes informacoes-extra">
+        <div id="extra-form" class="quadro-informacoes informacoes-extra escondido">
             <h3 class="quadro-informacoes-titulo">Atividades complementares</h3>
             <p class="quadro-informacoes-descricao">
                 Descreva cursos de qualificação e trabalhos voluntários em que você participa ou participou.
@@ -379,7 +380,7 @@
             </div>
         </div>
 
-        <div class="quadro-informacoes informacoes-habilidades">
+        <div id="habilities-form" class="quadro-informacoes informacoes-habilidades escondido">
             <h3 class="quadro-informacoes-titulo">Habilidades</h3>
             <p class="quadro-informacoes-descricao">
                 Para conhecermos você melhor, selecione 3 habilidades que diferenciam você dos demais candidatos.
@@ -402,10 +403,10 @@
             </div>
         </div>
 
-        <div class="quadro-informacoes informacoes-resumo">
+        <div id="resume-form" class="quadro-informacoes informacoes-resumo escondido">
             <h3 class="quadro-informacoes-titulo">Resumo</h3>
             <p class="quadro-informacoes-descricao">
-            Faça um breve resumo do seu currículo e de sua trajetória profissional, destacando seus diferenciais.
+                Faça um breve resumo do seu currículo e de sua trajetória profissional, destacando seus diferenciais.
             </p>
             <div class="row">
                 <div class="form-group col-sm-12">
@@ -415,7 +416,7 @@
             </div>
             <script>
                 CKEDITOR.replace('descricao-resumo');
-                </script>
+            </script>
             <div class="container-botoes">
 
                 <a href="#" class="link-cancelar">Voltar</a>

@@ -40,6 +40,10 @@ input[type="file"] {
 }
 
 /* PROPRIEDADES ESPECÍFICAS */
+.escondido {
+    display: none;
+}
+
 .titulo-aplicacao {
     color: #FFF;
 }
