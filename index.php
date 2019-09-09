@@ -121,10 +121,33 @@
                         Estado
                     </label>
                     <select class="form-control">
-                        <option value="RS">RS</option>
+                        <option value="AC">AC</option>
+                        <option value="AL">AL</option>
+                        <option value="AP">AP</option>
+                        <option value="AM">AM</option>
+                        <option value="BA">BA</option>
+                        <option value="CE">CE</option>
+                        <option value="DF">DF</option>
+                        <option value="ES">ES</option>
+                        <option value="GO">GO</option>
+                        <option value="MA">MA</option>
+                        <option value="MT">MT</option>
+                        <option value="MS">MS</option>
+                        <option value="MG">MG</option>
+                        <option value="PA">PA</option>
+                        <option value="PB">PB</option>
                         <option value="PR">PR</option>
+                        <option value="PE">PE</option>
+                        <option value="PI">PI</option>
+                        <option value="RJ">RJ</option>
+                        <option value="RN">RN</option>
+                        <option value="RS">RS</option>
+                        <option value="RO">RO</option>
+                        <option value="RR">RR</option>
                         <option value="SC">SC</option>
                         <option value="SP">SP</option>
+                        <option value="SE">SE</option>
+                        <option value="TO">TO</option>
                     </select>
                 </div>
                 <div class="form-group col-sm-10">
@@ -203,7 +226,79 @@
 
             </div>
         </div>
+
+        <div class="quadro-informacoes informacoes-formacao">
+            <h3 class="quadro-informacoes-titulo">Escolaridade</h3>
+            <p class="quadro-informacoes-descricao">
+                Informe seu nível de formação, nome do curso, instituição, ano de início e ano de conclusão.
+            </p>
+            <div class="row">
+                <?php for ($i=0; $i < 3; $i++): ?>
+                <div class="form-group col-sm-6">
+                    <label class="form-label">
+                        Formação
+                    </label>
+                    <select class="form-control">
+                        <option value="0">Não alfabetizado</option>
+                        <option value="1">Ensino Fundamental</option>
+                        <option value="2">Ensino Médio</option>
+                        <option value="3">Ensino Técnico</option>
+                        <option value="4">Ensino Superior</option>
+                        <option value="5">Pós-graduação</option>
+                        <option value="6">Mestrado</option>
+                        <option value="7">Doutorado</option>
+                    </select>
+                </div>
+
+                <div class="form-group col-sm-6">
+                    <label class="form-label">
+                        Nome do curso
+                    </label>
+                    <input class="form-control" type="text" minlength="2" maxlenght="250" placeholder="Nome do curso">
+                </div>
+
+                <div class="form-group col-sm-12">
+                    <label class="form-label">
+                        Nome da Instituição
+                    </label>
+                    <input class="form-control" type="text" minlength="2" maxlenght="250"
+                        placeholder="Nome da Instituição">
+                </div>
+
+                <div class="form-group col-sm-6">
+                    <label class="form-label">
+                        Data de Inicio
+                    </label>
+                    <div class="input-date">
+                        <input class="form-control" type="date" min="1950-01-01" max="<?=date('Y-m-d');?>">
+                    </div>
+                </div>
+
+                <div class="form-group col-sm-6">
+                    <label class="form-label">
+                        Data de Término
+                    </label>
+                    <div class="input-date">
+                        <input class="form-control" type="date" min="1950-01-01" max="<?=date('Y-m-d');?>">
+                    </div>
+                </div>
+
+                <?php if($i < 2 ): ?>
+                <div class="separador"></div>
+                <?php endif; ?>
+
+                <?php endfor; ?>
+
+            </div>
+            <div class="container-botoes">
+
+                <a href="#" class="link-cancelar">Voltar</a>
+                <input class="btn btn-primary botao-proximo" type="submit" value="Próximo">
+
+            </div>
+        </div>
     </div>
+</div>
 </div>
 </div>
 
