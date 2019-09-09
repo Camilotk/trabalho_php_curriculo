@@ -3,14 +3,29 @@
     height: 29.7cm;
     background-color: #FFF;
     margin-top: 50px;
-    margin-left:auto;
+    margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
     box-shadow: 4px 3px 5px 0px gray;
+    display: block;
+    overflow: hidden;
 }
 
 .sidebar {
     background-color: #6A467D;
     width: 8cm;
-    height: inherit;
+    height: 30cm;
+}
+
+.candidate-info {
+    padding: 10px;
+}
+
+.nome-completo {
+    height: fit-content;
+    width: auto;
+}
+
+.resumo {
+    word-wrap: break-word;
 }

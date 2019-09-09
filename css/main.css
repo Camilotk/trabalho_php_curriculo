@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 /* PROPRIEDADES DA PÁGINA */
-body{
+body {
     background-color: #F3F6F9;
 }
 
@@ -16,7 +16,7 @@ body{
     color: #626262;
     font-weight: 650;
     font-size: 15px;
-    font-family: Montserrat,Arial,Tahoma,sans-serif;
+    font-family: Montserrat, Arial, Tahoma, sans-serif;
     margin-bottom: 0;
 }
 
@@ -32,7 +32,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 input[type="file"] {
     line-height: 10px;
-  }
+}
 
 /* PROPRIEDADES DO BOOTSTRAP */
 .container {
@@ -61,12 +61,12 @@ input[type="file"] {
     text-align: left;
     font-weight: 400;
     color: #838383;
-    font-family: Montserrat,Arial,Tahoma,sans-serif;
+    font-family: Montserrat, Arial, Tahoma, sans-serif;
 }
 
 .quadro-informacoes-subtitulo {
     color: #757575;
-    font-family: Montserrat,Arial,Tahoma,sans-serif;
+    font-family: Montserrat, Arial, Tahoma, sans-serif;
     font-size: 14px;
     font-weight: bolder;
     margin-left: 15px;
@@ -104,7 +104,7 @@ input[type="file"] {
 
 .botao-proximo:hover {
     background-color: rgb(50, 116, 50);
-    border-color:  rgb(50, 116, 50);
+    border-color: rgb(50, 116, 50);
 }
 
 .botao-enviar {
@@ -118,6 +118,7 @@ input[type="file"] {
     background-color: #C9302C;
     border-color: #C9302C;
 }
+
 .link-cancelar {
     align-self: flex-start;
     padding-left: 15px;
