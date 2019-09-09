@@ -101,9 +101,19 @@ input[type="file"] {
 .botao-proximo:hover {
     background-color: rgb(50, 116, 50);
     border-color:  rgb(50, 116, 50);
-    border-radius: 25px;
 }
 
+.botao-enviar {
+    background-color: #C9302C;
+    border-color: #C9302C;
+    border-radius: 25px;
+    margin-left: auto;
+}
+
+.botao-enviar:hover {
+    background-color: #C9302C;
+    border-color: #C9302C;
+}
 .link-cancelar {
     align-self: flex-start;
     padding-left: 15px;
@@ -115,6 +125,10 @@ input[type="file"] {
 
 .separador {
     margin-bottom: 135px;
+}
+
+.separador-habilidades {
+    margin-bottom: 5px;
 }
 
 /*

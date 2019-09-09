@@ -62,7 +62,7 @@
                 </div>
                 <div class="container-botoes">
 
-                    <input class="btn btn-primary botao-proximo" type="submit" value="Próximo">
+                    <input class="btn btn-primary botao-proximo" type="button" value="Próximo">
 
                 </div>
             </div>
@@ -160,7 +160,7 @@
             <div class="container-botoes">
 
                 <a href="#" class="link-cancelar">Voltar</a>
-                <input class="btn btn-primary botao-proximo" type="submit" value="Próximo">
+                <input class="btn btn-primary botao-proximo" type="button" value="Próximo">
 
             </div>
         </div>
@@ -192,7 +192,10 @@
                     <label class="form-label">
                         Atividades desempenhadas (opcional)
                     </label>
-                    <textarea class="form-control"></textarea>
+                    <textarea id="descricao-experiencia-<?=$i;?>" class="form-control"></textarea>
+                    <script>
+                        CKEDITOR.replace('descricao-experiencia-<?=$i;?>');
+                        </script>
                 </div>
 
                 <div class="form-group col-sm-6">
@@ -222,7 +225,7 @@
             <div class="container-botoes">
 
                 <a href="#" class="link-cancelar">Voltar</a>
-                <input class="btn btn-primary botao-proximo" type="submit" value="Próximo">
+                <input class="btn btn-primary botao-proximo" type="button" value="Próximo">
 
             </div>
         </div>
@@ -293,10 +296,134 @@
             <div class="container-botoes">
 
                 <a href="#" class="link-cancelar">Voltar</a>
-                <input class="btn btn-primary botao-proximo" type="submit" value="Próximo">
+                <input class="btn btn-primary botao-proximo" type="button" value="Próximo">
 
             </div>
         </div>
+
+        <div class="quadro-informacoes informacoes-extra">
+            <h3 class="quadro-informacoes-titulo">Atividades complementares</h3>
+            <p class="quadro-informacoes-descricao">
+                Descreva cursos de qualificação e trabalhos voluntários em que você participa ou participou.
+            </p>
+            <div class="row">
+                <?php for ($i=0; $i < 3; $i++): ?>
+                <div class="form-group col-sm-6">
+                    <label class="form-label">
+                        Tipo de atividade
+                    </label>
+                    <select class="form-control">
+                        <option value="0">Tipo</option>
+                        <option value="1">Curso</option>
+                        <option value="2">Palestra</option>
+                        <option value="3">Trabalho voluntário</option>
+                    </select>
+                </div>
+
+                <div class="form-group col-sm-6">
+                    <label class="form-label">
+                        Nome da atividade
+                    </label>
+                    <input class="form-control" type="text" minlength="2" maxlenght="250"
+                        placeholder="Nome da atividade">
+                </div>
+
+                <div class="form-group col-sm-12">
+                    <label class="form-label">
+                        Nome da Instituição
+                    </label>
+                    <input class="form-control" type="text" minlength="2" maxlenght="250"
+                        placeholder="Nome da Instituição">
+                </div>
+
+                <div class="form-group col-sm-12">
+                    <label class="form-label">
+                        Atividades desempenhadas (opcional)
+                    </label>
+                    <textarea id="descricao-atividades-<?=$i;?>" class="form-control"></textarea>
+                    <script>
+                        CKEDITOR.replace("descricao-atividades-<?=$i;?>");
+                    </script>
+                </div>
+
+                <div class="form-group col-sm-6">
+                    <label class="form-label">
+                        Data de Inicio
+                    </label>
+                    <div class="input-date">
+                        <input class="form-control" type="date" min="1950-01-01" max="<?=date('Y-m-d');?>">
+                    </div>
+                </div>
+
+                <div class="form-group col-sm-6">
+                    <label class="form-label">
+                        Data de Término
+                    </label>
+                    <div class="input-date">
+                        <input class="form-control" type="date" min="1950-01-01" max="<?=date('Y-m-d');?>">
+                    </div>
+                </div>
+
+                <?php if($i < 2 ): ?>
+                <div class="separador"></div>
+                <?php endif; ?>
+
+                <?php endfor; ?>
+
+            </div>
+            <div class="container-botoes">
+
+                <a href="#" class="link-cancelar">Voltar</a>
+                <input class="btn btn-primary botao-proximo" type="button" value="Próximo">
+
+            </div>
+        </div>
+
+        <div class="quadro-informacoes informacoes-habilidades">
+            <h3 class="quadro-informacoes-titulo">Habilidades</h3>
+            <p class="quadro-informacoes-descricao">
+                Para conhecermos você melhor, selecione 3 habilidades que diferenciam você dos demais candidatos.
+            </p>
+            <div class="row">
+                <?php for ($i=0; $i < 3; $i++): ?>
+                <div class="form-group col-sm-12">
+                    <input class="form-control" type="text" minleght="2" maxlenght="250" placeholder="Habilidade...">
+                    <?php if($i < 2 ): ?>
+                    <div class="separador-habilidades"></div>
+                    <?php endif; ?>
+                </div>
+                <?php endfor; ?>
+            </div>
+            <div class="container-botoes">
+
+                <a href="#" class="link-cancelar">Voltar</a>
+                <input class="btn btn-primary botao-proximo" type="button" value="Próximo">
+
+            </div>
+        </div>
+
+        <div class="quadro-informacoes informacoes-resumo">
+            <h3 class="quadro-informacoes-titulo">Resumo</h3>
+            <p class="quadro-informacoes-descricao">
+            Faça um breve resumo do seu currículo e de sua trajetória profissional, destacando seus diferenciais.
+            </p>
+            <div class="row">
+                <div class="form-group col-sm-12">
+                    <textarea id="descricao-resumo" class="form-control">Digite um resumo da sua vida profissional...
+                    </textarea>
+                </div>
+            </div>
+            <script>
+                CKEDITOR.replace('descricao-resumo');
+                </script>
+            <div class="container-botoes">
+
+                <a href="#" class="link-cancelar">Voltar</a>
+                <input class="btn btn-primary botao-enviar" type="submit" value="Enviar">
+
+            </div>
+        </div>
+
     </div>
 </div>
 </div>
