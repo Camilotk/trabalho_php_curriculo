@@ -120,3 +120,43 @@ if ($exp3)
 }
 
 /* EXTRA */
+$exp1 = isset($_POST['tipo-extra-1'], $_POST['nome-atividade-1'], $_POST['nome-instituicao-1'], $_POST['descricao-atividades-1'],
+              $_POST['data-inicio-atividade-1'], $_POST['data-final-atividade-1']);
+$exp2 = isset($_POST['tipo-extra-2'], $_POST['nome-atividade-2'], $_POST['nome-instituicao-2'], $_POST['descricao-atividades-2'],
+              $_POST['data-inicio-atividade-2'], $_POST['data-final-atividade-2']);
+$exp3 = isset($_POST['tipo-extra-3'], $_POST['nome-atividade-3'], $_POST['nome-instituicao-3'], $_POST['descricao-atividades-3'],
+              $_POST['data-inicio-atividade-3'], $_POST['data-final-atividade-3']);
+
+if($exp1)
+{
+    $atividades_extracurriculares[1]['tipo'] = retorna_extra($_POST['tipo-extra-1']);
+    $atividades_extracurriculares[1]['nome'] = $_POST['nome-atividade-1'];
+    $atividades_extracurriculares[1]['instituicao'] = $_POST['nome-instituicao-1'];
+    $atividades_extracurriculares[1]['inicio'] = $_POST['data-inicio-atividade-1'];
+    $atividades_extracurriculares[1]['fim'] = $_POST['data-final-atividade-1'];
+}
+
+if($exp2)
+{
+    $atividades_extracurriculares[2]['tipo'] = retorna_extra($_POST['tipo-extra-2']);
+    $atividades_extracurriculares[2]['nome'] = $_POST['nome-atividade-2'];
+    $atividades_extracurriculares[2]['instituicao'] = $_POST['nome-instituicao-2'];
+    $atividades_extracurriculares[2]['inicio'] = $_POST['data-inicio-atividade-2'];
+    $atividades_extracurriculares[2]['fim'] = $_POST['data-final-atividade-2'];
+}
+
+if($exp3)
+{
+    $atividades_extracurriculares[3]['tipo'] = retorna_extra($_POST['tipo-extra-3']);
+    $atividades_extracurriculares[3]['nome'] = $_POST['nome-atividade-3'];
+    $atividades_extracurriculares[3]['instituicao'] = $_POST['nome-instituicao-3'];
+    $atividades_extracurriculares[3]['inicio'] = $_POST['data-inicio-atividade-3'];
+    $atividades_extracurriculares[3]['fim'] = $_POST['data-final-atividade-3'];
+}
+
+/* HABILIDADES */
+
+if(isset($_POST['habilidade-1'])) $habilidade[1] = $_POST['habilidade-1'];
+if(isset($_POST['habilidade-2'])) $habilidade[2] = $_POST['habilidade-2'];
+if(isset($_POST['habilidade-3'])) $habilidade[3] = $_POST['habilidade-3'];
+
