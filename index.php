@@ -341,7 +341,7 @@
                         <label class="form-label">
                             Nome da Instituição
                         </label>
-                        <input name="nome-instituicao-<?=$i;?>" class="form-control" type="text" minlength="2" maxlenght="250"
+                        <input name="instituicao-<?=$i;?>" class="form-control" type="text" minlength="2" maxlenght="250"
                             placeholder="Nome da Instituição">
                     </div>
 
@@ -349,7 +349,7 @@
                         <label class="form-label">
                             Atividades desempenhadas (opcional)
                         </label>
-                        <textarea id="descricao-atividades-<?=$i;?>" class="form-control"></textarea>
+                        <textarea name="descricao-atividades-<?=$i;?>" id="descricao-atividades-<?=$i;?>" class="form-control"></textarea>
                         <script>
                             CKEDITOR.replace("descricao-atividades-<?=$i;?>");
                         </script>
