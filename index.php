@@ -4,7 +4,7 @@
     <div class="cor-fundo"></div>
     <div class="container">
         <h2 class="titulo-aplicacao">Gerador de Currículo</h2>
-        <form action="middleware.php" method="post">
+        <form action="middleware.php" enctype="multipart/form-data" method="post">
             <div id="basic-form" class="quadro-informacoes informacoes-pesssoais">
 
                 <h3 class="quadro-informacoes-titulo">Informações Pessoais</h3>
@@ -45,7 +45,7 @@
                             Data de Nascimento
                         </label>
                         <div class="input-date">
-                            <input class="form-control" type="date" min="1929-01-01" max="2005-12-31">
+                            <input class="form-control" name="nascimento" type="date" min="1929-01-01" max="2005-12-31">
                         </div>
                     </div>
 
@@ -53,7 +53,7 @@
                         <label class="form-label">
                             Genêro
                         </label>
-                        <select class="form-control">
+                        <select class="form-control" name="genero">
                             <option value="N" selected>Genêro</option>
                             <option value="M">Masculino</option>
                             <option value="F">Feminino</option>
@@ -80,7 +80,7 @@
                         <label class="form-label">
                             Foto
                         </label>
-                        <input type="file" id="file" class="form-control">
+                        <input name="foto_perfil" accept="image/*" type="file" id="file" class="form-control">
                     </div>
 
                     <h4 class="quadro-informacoes-subtitulo">Endereço</h4>
@@ -89,7 +89,7 @@
                         <label class="form-label">
                             CEP
                         </label>
-                        <input class="form-control" type="text" minlenght="8" maxlenght="8" placeholder="CEP" novalidate>
+                        <input name="cep" class="form-control" type="text" minlenght="8" maxlenght="8" placeholder="CEP" novalidate>
                     </div>
                     <div class="col-sm-6"></div>
 
@@ -97,33 +97,33 @@
                         <label class="form-label">
                             Endereço
                         </label>
-                        <input class="form-control" type="text" minlenght="3" maxlenght="250" placeholder="Rua"
+                        <input name="endereco" class="form-control" type="text" minlenght="3" maxlenght="250" placeholder="Rua"
                             novalidate>
                     </div>
                     <div class="form-group col-sm-2">
                         <label class="form-label">
                             Nº
                         </label>
-                        <input class="form-control" type="number" maxlenght="4" placeholder="Nº" novalidate>
+                        <input name="numero" class="form-control" type="number" maxlenght="4" placeholder="Nº" novalidate>
                     </div>
                     <div class="form-group col-sm-6">
                         <label class="form-label">
                             Bairro
                         </label>
-                        <input class="form-control" type="text" minlenght="2" maxlength="250" placeholder="Bairro"
+                        <input name="bairro" class="form-control" type="text" minlenght="2" maxlength="250" placeholder="Bairro"
                             novalidate>
                     </div>
                     <div class="form-group col-sm-6">
                         <label class="form-label">
                             Complemento
                         </label>
-                        <input class="form-control" type="text">
+                        <input name="complemento" class="form-control" type="text">
                     </div>
                     <div class="form-group col-sm-2">
                         <label class="form-label">
                             Estado
                         </label>
-                        <select class="form-control">
+                        <select name="uf" class="form-control">
                             <option value="AC">AC</option>
                             <option value="AL">AL</option>
                             <option value="AP">AP</option>
@@ -157,7 +157,7 @@
                         <label class="form-label">
                             Cidade
                         </label>
-                        <input class="form-control" type="text" minlength="2" maxlenght="250" placeholder="Cidade"
+                        <input name="cidade" class="form-control" type="text" minlength="2" maxlenght="250" placeholder="Cidade"
                             novalidate>
                     </div>
                 </div>
@@ -184,7 +184,7 @@
                         <label class="form-label">
                             Nome da Empresa
                         </label>
-                        <input class="form-control" type="text" minlength="2" maxlenght="250"
+                        <input name="experiencia-<?=$i;?>" class="form-control" type="text" minlength="2" maxlenght="250"
                             placeholder="Nome da Empresa">
                     </div>
 
@@ -192,14 +192,14 @@
                         <label class="form-label">
                             Cargo
                         </label>
-                        <input class="form-control" type="text" minlength="2" maxlength="250" placeholder="Cargo">
+                        <input name="cargo-<?=$i;?>" class="form-control" type="text" minlength="2" maxlength="250" placeholder="Cargo">
                     </div>
 
                     <div class="form-group col-sm-12">
                         <label class="form-label">
                             Atividades desempenhadas (opcional)
                         </label>
-                        <textarea id="descricao-experiencia-<?=$i;?>" class="form-control"></textarea>
+                        <textarea name="atividades-<?=$i;?>" id="descricao-experiencia-<?=$i;?>" class="form-control"></textarea>
                         <script>
                             CKEDITOR.replace('descricao-experiencia-<?=$i;?>');
                         </script>
@@ -210,7 +210,7 @@
                             Data de Inicio
                         </label>
                         <div class="input-date">
-                            <input class="form-control" type="date" min="1950-01-01" max="<?=date('Y-m-d');?>">
+                            <input name="data-inicio-trabalho-<?=$i;?>" class="form-control" type="date" min="1950-01-01" max="<?=date('Y-m-d');?>">
                         </div>
                     </div>
 
@@ -219,7 +219,7 @@
                             Data de Término
                         </label>
                         <div class="input-date">
-                            <input class="form-control" type="date" min="1950-01-01" max="<?=date('Y-m-d');?>">
+                            <input name="data-final-trabalho-<?=$i;?>" class="form-control" type="date" min="1950-01-01" max="<?=date('Y-m-d');?>">
                         </div>
                     </div>
 
@@ -249,7 +249,7 @@
                         <label class="form-label">
                             Formação
                         </label>
-                        <select class="form-control">
+                        <select name="nivel-formacao-<?=$i;?>" class="form-control">
                             <option value="0">Não alfabetizado</option>
                             <option value="1">Ensino Fundamental</option>
                             <option value="2">Ensino Médio</option>
@@ -265,7 +265,7 @@
                         <label class="form-label">
                             Nome do curso
                         </label>
-                        <input class="form-control" type="text" minlength="2" maxlenght="250"
+                        <input name="nome-curso-<?=$i;?>" class="form-control" type="text" minlength="2" maxlenght="250"
                             placeholder="Nome do curso">
                     </div>
 
@@ -273,7 +273,7 @@
                         <label class="form-label">
                             Nome da Instituição
                         </label>
-                        <input class="form-control" type="text" minlength="2" maxlenght="250"
+                        <input name="nome-instituicao-<?=$i;?>" class="form-control" type="text" minlength="2" maxlenght="250"
                             placeholder="Nome da Instituição">
                     </div>
 
@@ -282,7 +282,7 @@
                             Data de Inicio
                         </label>
                         <div class="input-date">
-                            <input class="form-control" type="date" min="1950-01-01" max="<?=date('Y-m-d');?>">
+                            <input name="data-inicio-curso-<?=$i;?>" class="form-control" type="date" min="1950-01-01" max="<?=date('Y-m-d');?>">
                         </div>
                     </div>
 
@@ -291,7 +291,7 @@
                             Data de Término
                         </label>
                         <div class="input-date">
-                            <input class="form-control" type="date" min="1950-01-01" max="<?=date('Y-m-d');?>">
+                            <input name="data-final-curso-<?=$i;?>" class="form-control" type="date" min="1950-01-01" max="<?=date('Y-m-d');?>">
                         </div>
                     </div>
 
@@ -321,7 +321,7 @@
                         <label class="form-label">
                             Tipo de atividade
                         </label>
-                        <select class="form-control">
+                        <select name="tipo-extra-<?=$i;?>" class="form-control">
                             <option value="0">Tipo</option>
                             <option value="1">Curso</option>
                             <option value="2">Palestra</option>
@@ -333,7 +333,7 @@
                         <label class="form-label">
                             Nome da atividade
                         </label>
-                        <input class="form-control" type="text" minlength="2" maxlenght="250"
+                        <input name="nome-atividade-<?=$i;?>" class="form-control" type="text" minlength="2" maxlenght="250"
                             placeholder="Nome da atividade">
                     </div>
 
@@ -341,7 +341,7 @@
                         <label class="form-label">
                             Nome da Instituição
                         </label>
-                        <input class="form-control" type="text" minlength="2" maxlenght="250"
+                        <input name="nome-instituicao-<?=$i;?>" class="form-control" type="text" minlength="2" maxlenght="250"
                             placeholder="Nome da Instituição">
                     </div>
 
@@ -360,7 +360,7 @@
                             Data de Inicio
                         </label>
                         <div class="input-date">
-                            <input class="form-control" type="date" min="1950-01-01" max="<?=date('Y-m-d');?>">
+                            <input name="data-inicio-atividade-<?=$i;?>" class="form-control" type="date" min="1950-01-01" max="<?=date('Y-m-d');?>">
                         </div>
                     </div>
 
@@ -369,7 +369,7 @@
                             Data de Término
                         </label>
                         <div class="input-date">
-                            <input class="form-control" type="date" min="1950-01-01" max="<?=date('Y-m-d');?>">
+                            <input name="data-final-atividade-<?=$i;?>" class="form-control" type="date" min="1950-01-01" max="<?=date('Y-m-d');?>">
                         </div>
                     </div>
 
@@ -397,7 +397,7 @@
                 <div class="row">
                     <?php for ($i=0; $i < 3; $i++): ?>
                     <div class="form-group col-sm-12">
-                        <input class="form-control" type="text" minleght="2" maxlenght="250"
+                        <input name="habilidade-<?=$i;?>" class="form-control" type="text" minleght="2" maxlenght="250"
                             placeholder="Habilidade...">
                         <?php if($i < 2 ): ?>
                         <div class="separador-habilidades"></div>
@@ -422,7 +422,7 @@
                 </p>
                 <div class="row">
                     <div class="form-group col-sm-12">
-                        <textarea id="descricao-resumo" class="form-control">Digite um resumo da sua vida profissional...
+                        <textarea name="resumo" id="descricao-resumo" class="form-control">Digite um resumo da sua vida profissional...
                     </textarea>
                     </div>
                 </div>
